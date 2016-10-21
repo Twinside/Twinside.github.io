@@ -1167,9 +1167,9 @@ So using this information, we set up our initial coefficients
 
 $$
 \begin{matrix}
-X & = & x_0
-A & = & ffd_1(0)
-B & = & ffd_2(0)
+X & = & x_0 \\
+A & = & ffd_1(0) \\
+B & = & ffd_2(0) \\
 C & = & ffd_3(0)
 \end{matrix}
 $$
@@ -1178,10 +1178,10 @@ And we can make an step evaluation step with a simple summation:
 
 $$
 \begin{matrix}
-X' = X + A
-A' = A + B
-B' = B + C
-C' = C
+X' & = & X + A \\
+A' & = & A + B \\
+B' & = & B + C \\
+C' & = & C
 \end{matrix}
 $$
 
@@ -1270,10 +1270,12 @@ Conclusion
 ----------
 
 So here is the end of our journey into the gradient mesh rendering for SVG2,
-these features will be released with the Rasterific 0.7 and the associated
-packages (svg-tree & rasterific-svg). So let's hope browser implement quickly
-the support for this new feature to allow more usage of this interesting
-gradient object.
+these features will be released with the
+[Rasterific](https://github.com/Twinside/Rasterific) 0.7 and the associated
+packages ([svg-tree](https://github.com/Twinside/svg-tree) &
+[rasterific-svg](https://github.com/Twinside/rasterific-svg)). So let's hope
+browser implement quickly the support for this new feature to allow more usage
+of this interesting gradient object.
 
 Bugs
 ----
@@ -1303,4 +1305,6 @@ Graphics Gems IV, pages{438--446}, 1994
 
 [3] Lien, Shantz and Pratt
 "Adaptive Forward Differencing for Rendering Curves and Surfaces" 
+
+[4] [Cairo](https://www.cairographics.org/)
 

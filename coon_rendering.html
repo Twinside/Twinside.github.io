@@ -969,19 +969,19 @@ ffd_4(t) = ffd(ffd_3, t) = 0
 <p>So using this information, we set up our initial coefficients</p>
 <p><span class="math display">\[
 \begin{matrix}
-X &amp; = &amp; x_0
-A &amp; = &amp; ffd_1(0)
-B &amp; = &amp; ffd_2(0)
+X &amp; = &amp; x_0 \\
+A &amp; = &amp; ffd_1(0) \\
+B &amp; = &amp; ffd_2(0) \\
 C &amp; = &amp; ffd_3(0)
 \end{matrix}
 \]</span></p>
 <p>And we can make an step evaluation step with a simple summation:</p>
 <p><span class="math display">\[
 \begin{matrix}
-X&#39; = X + A
-A&#39; = A + B
-B&#39; = B + C
-C&#39; = C
+X&#39; &amp; = &amp; X + A \\
+A&#39; &amp; = &amp; A + B \\
+B&#39; &amp; = &amp; B + C \\
+C&#39; &amp; = &amp; C
 \end{matrix}
 \]</span></p>
 <p>Which is a far cheaper computation ### Cubic bezier rasterization using Forward difference</p>
@@ -1049,7 +1049,7 @@ rasterizerCubicBezier source bez uvStart uvEnd <span class="fu">=</span> <span c
   lift <span class="fu">$</span> go <span class="dv">0</span> (<span class="dt">V1</span> coeffStart) (<span class="dt">V1</span> <span class="fu">$</span> _cBezierX0 bez) du dv</code></pre></div>
 <p>To render our tensor patch, we interpolate accross the 4 cubic bezier of the patch in one direction, and rasterize a curve made of the 4 current point at each positions, yielding the final render.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>So here is the end of our journey into the gradient mesh rendering for SVG2, these features will be released with the Rasterific 0.7 and the associated packages (svg-tree &amp; rasterific-svg). So let's hope browser implement quickly the support for this new feature to allow more usage of this interesting gradient object.</p>
+<p>So here is the end of our journey into the gradient mesh rendering for SVG2, these features will be released with the <a href="https://github.com/Twinside/Rasterific">Rasterific</a> 0.7 and the associated packages (<a href="https://github.com/Twinside/svg-tree">svg-tree</a> &amp; <a href="https://github.com/Twinside/rasterific-svg">rasterific-svg</a>). So let's hope browser implement quickly the support for this new feature to allow more usage of this interesting gradient object.</p>
 <h2 id="bugs">Bugs</h2>
 <p>Glitches are a nice, here's a collection of the nicest ones:</p>
 <div class="figure">
@@ -1073,5 +1073,6 @@ rasterizerCubicBezier source bez uvStart uvEnd <span class="fu">=</span> <span c
 <p>[1] Chengfu Yao, Jon Rokne An efficient algorithm for subdividing linear Coons surfaces Article in Computer Aided Geometric Design 8(4):291-303 · October 1991</p>
 <p>[2] Paul S. Heckbert, Bilinear Coons Patch Image Warping Graphics Gems IV, pages{438--446}, 1994</p>
 <p>[3] Lien, Shantz and Pratt &quot;Adaptive Forward Differencing for Rendering Curves and Surfaces&quot;</p>
+<p>[4] [Cairo](https://www.cairographics.org/)</p>
 </body>
 </html>
