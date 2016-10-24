@@ -1,9 +1,9 @@
-% Mesh Gradient rendering in Haskell
+% SVG2 Mesh Gradient rendering in Haskell
 % Vincent Berthoux
 % October 2016
 
-Mesh Gradient rendering in Haskell
-==================================
+SVG2 Mesh Gradient rendering in Haskell
+=======================================
 
 The [SVG 2.0 Draft](https://svgwg.org/svg2-draft/pservers.html#MeshGradientElement)
 include a new graphical element/texture: the Gradient Mesh. While not a novel technique,

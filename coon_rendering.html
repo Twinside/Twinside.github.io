@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
   <meta name="author" content="Vincent Berthoux" />
-  <title>Mesh Gradient rendering in Haskell</title>
+  <title>SVG2 Mesh Gradient rendering in Haskell</title>
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
 div.sourceCode { overflow-x: auto; }
@@ -49,13 +49,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </head>
 <body>
 <div id="header">
-<h1 class="title">Mesh Gradient rendering in Haskell</h1>
+<h1 class="title">SVG2 Mesh Gradient rendering in Haskell</h1>
 <h2 class="author">Vincent Berthoux</h2>
 <h3 class="date">October 2016</h3>
 </div>
 <div id="TOC">
 <ul>
-<li><a href="#mesh-gradient-rendering-in-haskell">Mesh Gradient rendering in Haskell</a><ul>
+<li><a href="#svg2-mesh-gradient-rendering-in-haskell">SVG2 Mesh Gradient rendering in Haskell</a><ul>
 <li><a href="#what-is-a-gradient-mesh">What is a gradient mesh</a></li>
 <li><a href="#coon-patch">Coon patch</a><ul>
 <li><a href="#coon-surface">Coon surface</a></li>
@@ -82,7 +82,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 </ul>
 </div>
-<h1 id="mesh-gradient-rendering-in-haskell">Mesh Gradient rendering in Haskell</h1>
+<h1 id="svg2-mesh-gradient-rendering-in-haskell">SVG2 Mesh Gradient rendering in Haskell</h1>
 <p>The <a href="https://svgwg.org/svg2-draft/pservers.html#MeshGradientElement">SVG 2.0 Draft</a> include a new graphical element/texture: the Gradient Mesh. While not a novel technique, <a href="https://partners.adobe.com/public/developer/en/ps/sdk/TN5600.SmoothShading.pdf">postscript</a> use them as ShadingType 6 and 7 (Coons patch meshes and Tensor product patch meshes) as well as PDF <a href="http://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/pdf_reference_1-7.pdf">PDF</a> (section 4.6.3), it's implementation details and understanding are worthwhile.</p>
 <p>This document will describe how is defined a Gradient mesh within the SVG 2 draft specification, describes how to render it, look at the Postscript/PDF extension for tensor product and, finally the other possible extension for the tool.</p>
 <p>Keep your <a href="http://pomax.github.io/bezierinfo/">pomax guide to the bezier curve</a> nearby and Let's roll.</p>
